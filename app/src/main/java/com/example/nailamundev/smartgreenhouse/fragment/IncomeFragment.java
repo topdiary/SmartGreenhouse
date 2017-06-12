@@ -204,5 +204,5 @@ public class IncomeFragment extends Fragment implements AdapterView.OnItemSelect
     }
 
 
-//test init repo
+
 }
