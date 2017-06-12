@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:title="@string/add_greenhouse"
+        android:id="@+id/action_addGreenhouses"
+        app:showAsAction="never"/>
+
+    <item
+        android:title="@string/setting"
+        android:id="@+id/action_settings"
+        app:showAsAction="never"/>
+    <item
+        android:title="@string/send_feedback"
+        android:id="@+id/action_feedback"
+        app:showAsAction="never"/>
+    <item
+        android:title="@string/help"
+        android:id="@+id/action_help"
+        app:showAsAction="never"/>
+</menu>

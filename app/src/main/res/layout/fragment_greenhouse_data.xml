@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayoutData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/ivImgData"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/greenhouse_height_area"
+                        android:scaleType="centerCrop" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/greenhouse_height_area"
+                        android:background="@color/transparent600" />
+
+                    <View
+                        android:id="@+id/viewCreate"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/greenhouse_height_tab_area"
+                        android:layout_alignBottom="@id/ivImgData"
+                        android:background="@color/transparent600" />
+
+                    <View
+                        android:id="@+id/vMap"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/greenhouse_height_view_map"
+                        android:background="@drawable/selector_map" />
+
+                    <ImageView
+                        android:id="@+id/placeholder"
+                        android:layout_width="@dimen/greenhouse_size_icon_placeholder"
+                        android:layout_height="@dimen/greenhouse_size_icon_placeholder"
+                        android:layout_marginLeft="@dimen/greenhouse_margin_left_placeholder"
+                        android:layout_marginTop="@dimen/greenhouse_margin_Top_placeholder"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_action_locationw" />
+
+                    <TextView
+                        android:id="@+id/tvAddressData"
+                        android:layout_width="@dimen/greenhouse_width_tv_address"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/greenhouse_margin_left_tv_address"
+                        android:layout_marginTop="@dimen/greenhouse_margin_top_tv_address"
+                        android:layout_toRightOf="@id/placeholder"
+                        android:ellipsize="end"
+                        android:freezesText="true"
+                        android:maxLines="2"
+                        android:text="71 Pilgrim Avenue Chevy Chase, MD 20815"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/body1" />
+
+                    <ImageView
+                        android:layout_width="@dimen/greenhouse_size_icon_direction"
+                        android:layout_height="@dimen/greenhouse_size_icon_direction"
+                        android:layout_alignBottom="@id/placeholder"
+                        android:layout_alignRight="@+id/tvUnit"
+                        android:src="@drawable/ic_action_direction" />
+
+
+                    <ImageView
+                        android:id="@+id/vegetables"
+                        android:layout_width="@dimen/greenhouse_size_icon_vegetables"
+                        android:layout_height="@dimen/greenhouse_size_icon_vegetables"
+                        android:layout_above="@id/viewCreate"
+                        android:layout_alignLeft="@+id/placeholder"
+                        android:layout_alignStart="@+id/placeholder"
+                        android:layout_marginBottom="@dimen/greenhouse_margin_bottom_vegetable"
+                        android:layout_marginLeft="@dimen/greenhouse_margin_left_vegetables"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/vegetables" />
+
+
+                    <TextView
+                        android:id="@+id/tvPlant"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/vegetables"
+                        android:layout_marginLeft="@dimen/greenhouse_margin_left_tv_plant"
+                        android:layout_toRightOf="@+id/vegetables"
+                        android:text=" "
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/headline"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/ivImgData"
+                        android:layout_centerInParent="true"
+                        android:layout_marginBottom="@dimen/greenhouse_margin_bottom_date"
+                        android:freezesText="true"
+                        android:text=" "
+                        android:textColor="@color/white_transparent_90f"
+                        android:textSize="@dimen/caption" />
+
+                    <TextView
+                        android:id="@id/tvUnit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/vegetables"
+                        android:layout_alignRight="@id/ivImgData"
+                        android:layout_alignTop="@+id/tvExTemperature"
+                        android:layout_marginRight="@dimen/greenhouse_margin_right_tv_unit"
+                        android:freezesText="true"
+                        android:text="@string/celsius"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/title" />
+
+                    <TextView
+                        android:id="@id/tvExTemperature"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/vegetables"
+                        android:layout_alignRight="@id/tvUnit"
+                        android:layout_marginRight="@dimen/greenhouse_margin_right_tv_extemperature"
+                        android:text=" "
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/headline" />
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="@dimen/greenhouse_size_icon_cloud"
+                        android:layout_height="30dp"
+                        android:layout_alignBottom="@+id/vegetables"
+                        android:layout_alignRight="@id/tvExTemperature"
+                        android:layout_marginRight="35dp"
+                        android:src="@drawable/cloud" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#eeeeee"
+                    android:orientation="vertical"
+                    android:padding="@dimen/greenhouse_padding_12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <!-- Crad Temperature -->
+                        <android.support.v7.widget.CardView
+                            android:layout_width="@dimen/greenhouse_width_zero"
+                            android:layout_height="@dimen/greenhouse_height_cardview_data"
+                            android:layout_margin="@dimen/greenhouse_margin_cardview_data"
+                            android:layout_weight="1">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/colorPrimary">
+
+                                <TextView
+                                    android:id="@+id/tvTitleTem"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="@dimen/dimen_title_status"
+                                    android:text="@string/temperature"
+                                    android:textColor="@color/white" />
+
+                                <TextView
+                                    android:id="@+id/tvValueTem"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginBottom="@dimen/dimen_value_status"
+                                    android:freezesText="true"
+                                    android:text=" "
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/display1" />
+
+                                <View
+                                    android:id="@+id/vTem"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/selector_data" />
+
+                                <TextView
+                                    android:id="@+id/tvErrorTem"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text=" "
+                                    android:textColor="@color/white" />
+
+
+                            </RelativeLayout>
+
+
+                        </android.support.v7.widget.CardView>
+
+
+                        <!-- Card Humidity-->
+                        <android.support.v7.widget.CardView
+                            android:layout_width="@dimen/greenhouse_width_zero"
+                            android:layout_height="@dimen/greenhouse_height_cardview_data"
+                            android:layout_margin="@dimen/greenhouse_margin_cardview_data"
+                            android:layout_weight="1">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/blue500">
+
+                                <TextView
+                                    android:id="@+id/tvTitleHum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="@dimen/dimen_title_status"
+                                    android:text="@string/humidity"
+                                    android:textColor="@color/white" />
+
+                                <TextView
+                                    android:id="@+id/tvValueHum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginBottom="@dimen/dimen_value_status"
+                                    android:freezesText="true"
+                                    android:text=" "
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/display1" />
+
+                                <View
+                                    android:id="@+id/vHum"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/selector_data" />
+
+                                <TextView
+                                    android:id="@+id/tvErrorHum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text=" "
+                                    android:textColor="@color/white" />
+
+                            </RelativeLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <!-- Card Soil-->
+                        <android.support.v7.widget.CardView
+                            android:layout_width="@dimen/greenhouse_width_zero"
+                            android:layout_height="@dimen/greenhouse_height_cardview_data"
+                            android:layout_margin="@dimen/greenhouse_margin_cardview_data"
+                            android:layout_weight="1">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/brown">
+
+                                <TextView
+                                    android:id="@+id/tvTitleSoil"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="@dimen/dimen_title_status"
+                                    android:text="@string/soil_moisture"
+                                    android:textColor="@color/white" />
+
+                                <TextView
+                                    android:id="@+id/tvValueSoil"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginBottom="@dimen/dimen_value_status"
+                                    android:freezesText="true"
+                                    android:text=" "
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/display1" />
+
+                                <View
+                                    android:id="@+id/vSoil"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/selector_data" />
+
+                                <TextView
+                                    android:id="@+id/tvErrorSoil"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text=" "
+                                    android:textColor="@color/white" />
+
+                            </RelativeLayout>
+
+
+                        </android.support.v7.widget.CardView>
+
+                        <!--Card Light -->
+                        <android.support.v7.widget.CardView
+                            android:layout_width="@dimen/greenhouse_height_zero"
+                            android:layout_height="@dimen/greenhouse_height_cardview_data"
+                            android:layout_margin="@dimen/greenhouse_margin_cardview_data"
+                            android:layout_weight="1">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/amber">
+
+                                <TextView
+                                    android:id="@+id/tvTitleLight"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="@dimen/dimen_title_status"
+                                    android:text="@string/light"
+                                    android:textColor="@color/white" />
+
+                                <TextView
+                                    android:id="@+id/tvValueLight"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginBottom="@dimen/dimen_value_status"
+                                    android:layout_marginTop="@dimen/dimen_title_status"
+                                    android:freezesText="true"
+                                    android:text=" "
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/display1" />
+
+                                <View
+                                    android:id="@+id/vLight"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/selector_data" />
+
+                                <TextView
+                                    android:id="@+id/tvErrorLight"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text=" "
+                                    android:textColor="@color/white" />
+
+                            </RelativeLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/greenhouse_height_cardview_water"
+                        android:layout_marginTop="@dimen/greenhouse_margin_top_cardview_water">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/ivIconDevice"
+                                android:layout_width="@dimen/greenhouse_size_icon_water"
+                                android:layout_height="@dimen/greenhouse_size_icon_water"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/greenhouse_margin_left"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/water_level" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/greenhouse_margin_left"
+                                android:layout_toRightOf="@id/ivIconDevice"
+                                android:text="@string/water_level"
+                                android:textColor="@color/grey50"
+                                android:textSize="@dimen/body1" />
+
+                            <TextView
+                                android:id="@+id/tvWaterLevel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/greenhouse_margin_right"
+                                android:text=" "
+                                android:textSize="@dimen/headline"
+                                android:textStyle="bold" />
+
+
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.CardView>
+
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/greenhouse_height_cardview_account"
+                        android:layout_marginTop="@dimen/greenhouse_margin_top_cardview_account">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/greenhouse_padding_8dp"
+                            android:weightSum="3">
+
+                            <RelativeLayout
+                                android:layout_width="@dimen/greenhouse_width_zero"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="@string/income"
+                                    android:textColor="@color/grey50"
+                                    android:textSize="@dimen/caption" />
+
+
+                                <TextView
+                                    android:id="@+id/tvIncome"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:text=" "
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:textSize="@dimen/title"
+                                    android:textStyle="bold" />
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="@string/thb"
+                                    android:textColor="@color/grey50"
+                                    android:textSize="@dimen/caption" />
+
+
+                                <View
+                                    android:layout_width="@dimen/greenhouse_width_line"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:background="@color/overlay_color" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="@dimen/greenhouse_width_zero"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="@string/expenses"
+                                    android:textColor="@color/grey50"
+                                    android:textSize="@dimen/caption" />
+
+
+                                <TextView
+                                    android:id="@+id/tvExpense"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:text=" "
+                                    android:textColor="@color/red700"
+                                    android:textSize="@dimen/title"
+                                    android:textStyle="bold" />
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="@string/thb"
+                                    android:textColor="@color/grey50"
+                                    android:textSize="@dimen/caption" />
+
+
+                                <View
+                                    android:layout_width="@dimen/greenhouse_width_line"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:background="@color/overlay_color" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="@dimen/greenhouse_width_zero"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="@string/production"
+                                    android:textColor="@color/grey50"
+                                    android:textSize="@dimen/caption" />
+
+
+                                <TextView
+                                    android:id="@+id/tvProduct"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:text=" "
+                                    android:textColor="@color/colorPrimary2"
+                                    android:textSize="@dimen/title"
+                                    android:textStyle="bold" />
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="@string/kg"
+                                    android:textColor="@color/grey50"
+                                    android:textSize="@dimen/caption" />
+
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

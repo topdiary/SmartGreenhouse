@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/greenhouse_height_area">
+
+                <ImageView
+                    android:id="@+id/ivModeDevice"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/backdevice_load" />
+
+                <ImageView
+                    android:id="@+id/ivLogoModeDevice"
+                    android:layout_width="@dimen/greenhouse_img_control"
+                    android:layout_height="@dimen/greenhouse_img_control"
+                    android:layout_centerInParent="true" />
+
+                <View
+                    android:id="@+id/viewCreate"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/greenhouse_height_tab_area"
+                    android:layout_alignBottom="@id/ivModeDevice"
+                    android:background="@color/transparent600" />
+
+                <TextView
+                    android:id="@+id/tvModeDevice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/ivModeDevice"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="@dimen/greenhouse_margin_bottom_tvmode"
+                    android:text=" "
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/caption" />
+
+
+            </RelativeLayout>
+
+            <!-- Switch -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/greenhouse_height_layout_control"
+                    android:background="@color/lightDark"
+                    android:orientation="vertical"
+                    android:padding="@dimen/greenhouse_padding_16dp"
+                    android:weightSum="5">
+
+                    <!--Ventilator Fan-->
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/greenhouse_height_zero"
+                        android:layout_weight="1">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/ivIconDevice"
+                                android:layout_width="@dimen/greenhouse_size_icon_device"
+                                android:layout_height="@dimen/greenhouse_size_icon_device"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/greenhouse_margin_left_icon_device"
+                                android:scaleType="fitCenter" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/greenhouse_margin_left"
+                                android:layout_toRightOf="@id/ivIconDevice"
+                                android:text="@string/ventilators"
+                                android:textSize="@dimen/body1" />
+
+                            <ToggleButton
+                                android:id="@+id/tgVentilator"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/greenhouse_margin_right"
+                                android:background="@drawable/selector_control"
+                                android:textColor="@color/white"
+                                android:textOff=" "
+                                android:textOn=" " />
+
+                            <View
+                                android:id="@+id/vVentilator"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <!--LED lamp-->
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/greenhouse_height_zero"
+                        android:layout_marginTop="@dimen/greenhouse_margin_top_switch"
+                        android:layout_weight="1">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/ivIconDeviceLight"
+                                android:layout_width="@dimen/greenhouse_size_icon_device"
+                                android:layout_height="@dimen/greenhouse_size_icon_device"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/greenhouse_margin_left_icon_device"
+                                android:scaleType="fitCenter" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/greenhouse_margin_left"
+                                android:layout_toRightOf="@id/ivIconDeviceLight"
+                                android:text="@string/led_light"
+                                android:textSize="@dimen/body1" />
+
+                            <ToggleButton
+                                android:id="@+id/tgLight"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/greenhouse_margin_right"
+                                android:background="@drawable/selector_control"
+                                android:textColor="@color/white"
+                                android:textOff=" "
+                                android:textOn=" " />
+
+                            <View
+                                android:id="@+id/vLight"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+
+
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.CardView>
+
+
+                    <!--Evap System-->
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/greenhouse_height_zero"
+                        android:layout_marginTop="@dimen/greenhouse_margin_top_switch"
+                        android:layout_weight="1">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/ivIconDeviceEvap"
+                                android:layout_width="@dimen/greenhouse_size_icon_device"
+                                android:layout_height="@dimen/greenhouse_size_icon_device"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/greenhouse_margin_left_icon_device"
+                                android:scaleType="fitCenter" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/greenhouse_margin_left"
+                                android:layout_toRightOf="@id/ivIconDeviceEvap"
+                                android:text="@string/evap_system"
+                                android:textSize="@dimen/body1" />
+
+                            <ToggleButton
+                                android:id="@+id/tgEvap"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/greenhouse_margin_right"
+                                android:background="@drawable/selector_control"
+                                android:textColor="@color/white"
+                                android:textOff=" "
+                                android:textOn=" " />
+
+                            <View
+                                android:id="@+id/vEvap"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+
+                                />
+
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <!--Watering-->
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/greenhouse_height_zero"
+                        android:layout_marginTop="@dimen/greenhouse_margin_top_switch"
+                        android:layout_weight="1">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/ivIconDeviceWater"
+                                android:layout_width="@dimen/greenhouse_size_icon_device"
+                                android:layout_height="@dimen/greenhouse_size_icon_device"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/greenhouse_margin_left_icon_device"
+                                android:scaleType="fitCenter" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/greenhouse_margin_left"
+                                android:layout_toRightOf="@id/ivIconDeviceWater"
+                                android:text="@string/watering"
+                                android:textSize="@dimen/body1" />
+
+                            <ToggleButton
+                                android:id="@+id/tgWater"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/greenhouse_margin_right"
+                                android:background="@drawable/selector_control"
+                                android:textColor="@color/white"
+                                android:textOff=" "
+                                android:textOn=" " />
+
+                            <View
+                                android:id="@+id/vWater"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+
+
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <!--Fogger-->
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/greenhouse_height_zero"
+                        android:layout_marginTop="@dimen/greenhouse_margin_top_switch"
+                        android:layout_weight="1">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/ivIconDeviceFogger"
+                                android:layout_width="@dimen/greenhouse_size_icon_device"
+                                android:layout_height="@dimen/greenhouse_size_icon_device"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/greenhouse_margin_left_icon_device"
+                                android:scaleType="fitCenter" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/greenhouse_margin_left"
+                                android:layout_toRightOf="@id/ivIconDeviceFogger"
+                                android:freezesText="true"
+                                android:text="@string/fogger"
+                                android:textSize="@dimen/body1" />
+
+                            <ToggleButton
+                                android:id="@+id/tgFogger"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/greenhouse_margin_right"
+                                android:background="@drawable/selector_control"
+                                android:textColor="@color/white"
+                                android:textOff=" "
+                                android:textOn=" " />
+
+                            <View
+                                android:id="@+id/vFogger"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+
+
+                                />
+
+
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

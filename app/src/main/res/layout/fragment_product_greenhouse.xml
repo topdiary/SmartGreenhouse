@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/greenhouse_layout_account"
+                android:background="@color/white"
+                android:padding="@dimen/greenhouse_padding_16dp">
+
+
+                <ImageView
+                    android:id="@+id/ivIconAccount"
+                    android:layout_width="@dimen/greenhouse_width_icon_account"
+                    android:layout_height="@dimen/greenhouse_height_icon_account"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/box" />
+
+                <EditText
+                    android:id="@+id/editTextAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toLeftOf="@+id/tvUnit"
+                    android:layout_toRightOf="@id/ivIconAccount"
+                    android:background="@null"
+                    android:freezesText="true"
+                    android:gravity="end"
+                    android:hint="0"
+                    android:inputType="number"
+                    android:textColor="@color/transparent600"
+                    android:textColorHint="@color/transparent600"
+                    android:textSize="@dimen/edittext_account" />
+
+                <TextView
+                    android:id="@id/tvUnit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/greenhouse_margin_left"
+                    android:text="@string/kg"
+                    android:textColor="@color/transparent600"
+                    android:textSize="@dimen/display1" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/greenhouse_height_view"
+                android:background="@color/transparent600" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/greenhouse_padding_16dp">
+
+                <TextView
+                    android:id="@+id/tvCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/category"
+                    android:textSize="@dimen/subHeading" />
+
+                <Spinner
+                    android:id="@+id/spinnerProduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/greenhouse_margin_spinner"
+                    android:layout_toEndOf="@id/tvCategory"
+                    android:layout_toRightOf="@id/tvCategory" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/greenhouse_padding_16dp">
+
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dateAccount"
+                    android:textSize="@dimen/subHeading" />
+
+                <TextView
+                    android:id="@+id/tvDateResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/greenhouse_margin_account"
+                    android:layout_marginStart="@dimen/greenhouse_margin_account"
+                    android:layout_toEndOf="@+id/tvDate"
+                    android:layout_toRightOf="@+id/tvDate"
+                    android:background="@color/white"
+                    android:textSize="@dimen/subHeading" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/greenhouse_padding_16dp">
+
+                <TextView
+                    android:id="@+id/tvTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/time"
+                    android:textSize="@dimen/subHeading" />
+
+                <TextView
+                    android:id="@+id/tvTimeResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/greenhouse_margin_account"
+                    android:layout_marginStart="@dimen/greenhouse_margin_account"
+                    android:layout_toEndOf="@+id/tvTime"
+                    android:layout_toRightOf="@+id/tvTime"
+                    android:background="@color/white"
+                    android:textSize="@dimen/subHeading" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/greenhouse_padding_16dp">
+
+                <TextView
+                    android:id="@+id/tvNote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/note"
+                    android:textSize="@dimen/subHeading" />
+
+                <EditText
+                    android:id="@+id/editTextNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/greenhouse_height_edittext_account"
+                    android:layout_marginLeft="@dimen/greenhouse_margin_account"
+                    android:layout_marginStart="@dimen/greenhouse_margin_account"
+                    android:layout_toEndOf="@+id/tvNote"
+                    android:layout_toRightOf="@+id/tvNote"
+                    android:background="@color/white"
+                    android:maxLines="5" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/greenhouse_padding_16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <Button
+                        android:id="@+id/btnCancel"
+                        android:layout_width="@dimen/greenhouse_width_zero"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/greenhouse_margin_button"
+                        android:layout_weight="1"
+                        android:background="@color/red700"
+                        android:text="@string/cancel"
+                        android:textColor="@color/white" />
+
+                    <Button
+                        android:id="@+id/btnOk"
+                        android:layout_width="@dimen/greenhouse_width_zero"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/greenhouse_margin_button"
+                        android:layout_weight="1"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/ok"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--primary-->
+    <color name="colorPrimary">#8BC34A</color>
+    <color name="colorPrimaryDark">#689F38</color>
+    <color name="colorPrimary2">#212121</color>
+    <color name="colorPrimaryDark2">#000000</color>
+    <color name="colorAccent">#2196f3</color>
+
+    <!--transparent-->
+    <color name="transparent">#00000000</color>
+    <color name="transparent600">#60000000</color>
+    <color name="overlay_color">#20000000</color>
+    <color name="view_color_pressed">#80000000</color>
+    <color name="white_transparent_80f">#80ffffff</color>
+    <color name="white_transparent_90f">#90ffffff</color>
+
+    <!--color-->
+    <color name="white">#ffffff</color>
+    <color name="brown">#795548</color>
+    <color name="amber">#ffc107</color>
+    <color name="lightDark"> #f2f2f2</color>
+    <color name="blue500">#03a9f4</color>
+    <color name="blue700">#0288d1</color>
+    <color name="red700">#d32f2f</color>
+    <color name="grey">#f5f5f5</color>
+    <color name="grey50">#808080</color>
+    <color name="blue_grey">#263238</color>
+    <color name="blue_grey_2">#78909C</color>
+
+</resources>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/greenhouse_margin_left"
+        android:layout_marginRight="@dimen/greenhouse_margin_right"
+        android:layout_marginTop="@dimen/greenhouse_margin_top"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius="@dimen/greenhouse_corner_cardview">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/selector_btn"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <ImageView
+                    android:id="@+id/ivImg"
+                    android:layout_width="@dimen/greenhouse_width_zero"
+                    android:layout_height="@dimen/greenhouse_img_height"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop" />
+
+                <LinearLayout
+                    android:layout_width="@dimen/greenhouse_width_zero"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/greenhouse_padding_left_item">
+
+                    <TextView
+                        android:id="@+id/tvName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/greenhouse_margin_top"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="Naresuan University"
+                        android:textColor="@color/blue_grey"
+                        android:textSize="@dimen/title" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/greenhouse_margin_top4dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/greenhouse_size_icon_location"
+                            android:layout_height="@dimen/greenhouse_size_icon_location"
+                            android:src="@drawable/ic_action_locationc" />
+
+                        <TextView
+                            android:id="@+id/tvAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:paddingLeft="@dimen/greenhouse_padding_left_address_item"
+                            android:text="99 Moo 9 Tambon Tha Pho, Muang Phitsanulok 65000"
+                            android:textColor="@color/blue_grey_2"
+                            android:textSize="@dimen/caption" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/greenhouse_margin_top4dp"
+                        android:text="Salad"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/subHeading" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,94 @@
+<resources>
+    <string name="app_name">SmartGreenhouse</string>
+    <string name="open_drawer">Open Menu</string>
+    <string name="close_drawer">Close Menu</string>
+    <string name="setting">Setting</string>
+    <string name="send_feedback">Send feedback</string>
+    <string name="help">Help</string>
+    <string name="add_greenhouse">Add Greenhouse</string>
+    <string name="nameMain">Main</string>
+    <string name="datatab">Data</string>
+    <string name="controltab">Control</string>
+    <string name="date">Create Date</string>
+    <string name="celsius">°C</string>
+    <string name="temperature">Temperature</string>
+    <string name="light">Light intensity</string>
+    <string name="soil_moisture">Soil Moisture</string>
+    <string name="humidity">Humidity</string>
+    <string name="expenses">Expenses</string>
+    <string name="bath">bath</string>
+    <string name="logout">Logout</string>
+    <string name="setting_greenhouse">Setting Greenhouse</string>
+    <string name="auto">Automatic Mode</string>
+    <string name="normal">Normal Mode</string>
+    <string name="ledger">Ledger</string>
+    <string name="fogger">Fogger</string>
+    <string name="watering">Watering</string>
+    <string name="evap_system">Evap System</string>
+    <string name="ventilators">Ventilator Fan</string>
+    <string name="error_sensor">No sensor!</string>
+    <string name="manual">Manual Mode</string>
+    <string name="descriptionMode">When the open mode. A computer controlled greenhouse,
+        You can not control your device via application.</string>
+    <string name="descriptionMode2"> If you want to control devices in the greenhouse
+        have to close this mode.</string>
+    <string name="connecting">Connecting</string>
+    <string name="off_auto">Off Automatic mode</string>
+    <string name="on_mode">On Automatic mode</string>
+    <string name="water_level">Water Level</string>
+    <string name="water_normal">Normal</string>
+    <string name="water_medium">Medium</string>
+    <string name="water_low">Low</string>
+    <string name="income">Income</string>
+    <string name="notificationGreenhouse">Notifications</string>
+    <string name="description_notification">Select which value you want to
+        receive notifications form.</string>
+    <string name="text">Please check connection. To use it effectively.</string>
+    <string name="text_control">Now you do not have an Internet connection.
+        As of now, your work will be sent as soon as they are connected.</string>
+    <string name="warning">Warning</string>
+    <string name="ok">OK</string>
+    <string name="info">Info</string>
+    <string name="day">Day</string>
+    <string name="week">Week</string>
+    <string name="month">Month</string>
+    <string name="year">Year</string>
+    <string name="led_light">LED lamp</string>
+    <string name="kg">kg</string>
+    <string name="production">Production</string>
+    <string name="thb">THB</string>
+    <string name="category">Category :</string>
+    <string name="dateAccount">Date :</string>
+    <string name="time">Time :</string>
+    <string name="note">Note :</string>
+    <string name="cancel">Cancel</string>
+    <string name="product">Product</string>
+    <string name="account">Account</string>
+    <string name="shop">Shop</string>
+    <string name="about">About</string>
+    <string name="success">Success</string>
+    <string name="all_values">All values</string>
+    <string name="on">On</string>
+    <string name="off">Off</string>
+
+    <string-array name="category_income">
+        <item>Sale Product</item>
+        <item>Sale seed</item>
+        <item>Sale fertilizer</item>
+    </string-array>
+
+    <string-array name="category_expenses">
+        <item>Electricity Bill</item>
+        <item>Water Bill</item>
+        <item>Seed</item>
+        <item>Fertilizer</item>
+        <item>Repair</item>
+    </string-array>
+
+    <string-array name="category_product">
+        <item>Green oak</item>
+        <item>Lime</item>
+        <item>Cabbage</item>
+    </string-array>
+
+</resources>

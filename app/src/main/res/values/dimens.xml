@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Size font -->
+    <dimen name="caption">12sp</dimen>
+    <dimen name="body1">14sp</dimen>
+    <dimen name="subHeading">16sp</dimen>
+    <dimen name="title">20sp</dimen>
+    <dimen name="headline">24sp</dimen>
+    <dimen name="display1">34sp</dimen>
+    <dimen name="edittext_account">70sp</dimen>
+
+    <!-- dimen -->
+    <dimen name="drawer_menu_width">240dp</dimen>
+    <dimen name="dimen_title_status">10dp</dimen>
+    <dimen name="dimen_value_status">14dp</dimen>
+    <dimen name="greenhouse_layout_account">160dp</dimen>
+    <dimen name="greenhouse_corner_cardview">5dp</dimen>
+    <dimen name="greenhouse_tab_height">48dp</dimen>
+    <dimen name="greenhouse_width_icon_account">40dp</dimen>
+    <dimen name="greenhouse_width_zero">0dp</dimen>
+    <dimen name="greenhouse_width_edittext_account">190dp</dimen>
+    <dimen name="greenhouse_width_line">1dp</dimen>
+    <dimen name="greenhouse_width_tv_address">250dp</dimen>
+    <dimen name="greenhouse_height_zero">0dp</dimen>
+    <dimen name="greenhouse_height_view">20dp</dimen>
+    <dimen name="greenhouse_height_edittext_account">60dp</dimen>
+    <dimen name="greenhouse_height_area">150dp</dimen>
+    <dimen name="greenhouse_height_tab_area">20dp</dimen>
+    <dimen name="greenhouse_height_layout_control">450dp</dimen>
+    <dimen name="greenhouse_height_cardview_account">70dp</dimen>
+    <dimen name="greenhouse_height_cardview_data">100dp</dimen>
+    <dimen name="greenhouse_height_cardview_water">70dp</dimen>
+    <dimen name="greenhouse_height_view_map">50dp</dimen>
+    <dimen name="greenhouse_height_icon_account">40dp</dimen>
+    <dimen name="greenhouse_height_layout_switch">50dp</dimen>
+    <dimen name="greenhouse_height_line">1dp</dimen>
+    <dimen name="greenhouse_height_cardview_setting">56dp</dimen>
+
+    <!-- margin -->
+    <dimen name="greenhouse_margin_left">16dp</dimen>
+    <dimen name="greenhouse_margin_right">16dp</dimen>
+    <dimen name="greenhouse_margin_top">8dp</dimen>
+    <dimen name="greenhouse_margin_button">10dp</dimen>
+    <dimen name="greenhouse_margin_bottom">16dp</dimen>
+    <dimen name="greenhouse_margin_top4dp">4dp</dimen>
+    <dimen name="greenhouse_margin_spinner">20dp</dimen>
+    <dimen name="greenhouse_margin_account">28dp</dimen>
+    <dimen name="greenhouse_margin_bottom_tvmode">4dp</dimen>
+    <dimen name="greenhouse_margin_left_icon_device">10dp</dimen>
+    <dimen name="greenhouse_margin_top_switch">10dp</dimen>
+    <dimen name="greenhouse_margin_left_tv_address">6dp</dimen>
+    <dimen name="greenhouse_margin_top_tv_address">6dp</dimen>
+    <dimen name="greenhouse_margin_left_placeholder">4dp</dimen>
+    <dimen name="greenhouse_margin_Top_placeholder">12dp</dimen>
+    <dimen name="greenhouse_margin_bottom_vegetable">10dp</dimen>
+    <dimen name="greenhouse_margin_top_cardview_account">16dp</dimen>
+    <dimen name="greenhouse_margin_top_cardview_water">16dp</dimen>
+    <dimen name="greenhouse_margin_cardview_data">4dp</dimen>
+    <dimen name="greenhouse_margin_left_vegetables">4dp</dimen>
+    <dimen name="greenhouse_margin_left_tv_plant">10dp</dimen>
+    <dimen name="greenhouse_margin_bottom_date">4dp</dimen>
+    <dimen name="greenhouse_margin_right_tv_unit">10dp</dimen>
+    <dimen name="greenhouse_margin_right_tv_extemperature">24dp</dimen>
+    <dimen name="greenhouse_margin_left_tv_statemode">40dp</dimen>
+    <dimen name="greenhouse_margin_text">16dp</dimen>
+    <dimen name="greenhouse_margin_top_all_value">16dp</dimen>
+
+    <!-- padding -->
+    <dimen name="greenhouse_padding_16dp">16dp</dimen>
+    <dimen name="greenhouse_padding_12dp">12dp</dimen>
+    <dimen name="greenhouse_padding_8dp">8dp</dimen>
+    <dimen name="greenhouse_padding_left_item">14dp</dimen>
+    <dimen name="greenhouse_padding_left_address_item">5dp</dimen>
+
+
+    <!-- img -->
+    <dimen name="greenhouse_size_icon_device">40dp</dimen>
+    <dimen name="greenhouse_size_icon_placeholder">20dp</dimen>
+    <dimen name="greenhouse_size_icon_direction">20dp</dimen>
+    <dimen name="greenhouse_size_icon_vegetables">40dp</dimen>
+    <dimen name="greenhouse_size_icon_cloud">30dp</dimen>
+    <dimen name="greenhouse_size_icon_water">40dp</dimen>
+    <dimen name="greenhouse_size_icon_location">15dp</dimen>
+    <dimen name="greenhouse_img_height">90dp</dimen>
+    <dimen name="greenhouse_img_control">60dp</dimen>
+    <dimen name="greenhouse_size_img_user">64dp</dimen>
+
+
+</resources>

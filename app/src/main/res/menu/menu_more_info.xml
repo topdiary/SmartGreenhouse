@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_add"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_action_add"
+        android:title="Add Expen" />
+    <item
+        android:title= "@string/auto"
+        android:id="@+id/action_settingsGreenhouse"
+        app:showAsAction="never"/>
+    <item
+        android:title= "@string/notificationGreenhouse"
+        android:id="@+id/action_notificationGreenhouse"
+        app:showAsAction="never"/>
+</menu>

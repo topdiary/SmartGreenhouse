@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">SmartGreenhouse</string>
+    <string name="open_drawer">Open Menu</string>
+    <string name="close_drawer">Close Menu</string>
+    <string name="setting">การตั้งค่า</string>
+    <string name="send_feedback">ตอบกลับ</string>
+    <string name="help">ช่วยเหลือ</string>
+    <string name="add_greenhouse">เพิ่มโรงเรือน</string>
+    <string name="nameMain">หน้าหลัก</string>
+    <string name="datatab">ข้อมูล</string>
+    <string name="controltab">ควบคุม</string>
+    <string name="date">สร้างเมื่อวันที่</string>
+    <string name="temperature">อุณหภูมิ</string>
+    <string name="light">ความเข้มแสง</string>
+    <string name="soil_moisture">ความชื้นในดิน</string>
+    <string name="humidity">ความชื้นสัมพัทธ์</string>
+    <string name="expenses">รายจ่าย</string>
+    <string name="bath">บาท</string>
+    <string name="logout">ออกจากระบบ</string>
+    <string name="setting_greenhouse">การตั้งค่าโรงเรือน</string>
+    <string name="auto">โหมดอัตโนมัติ</string>
+    <string name="normal">โหมดปกติ</string>
+    <string name="fogger">ระบบพ่นหมอก</string>
+    <string name="watering">ระบบรดน้ำพืช</string>
+    <string name="evap_system">ระบบอีแว็ป</string>
+    <string name="ventilators">พัดลมระบายอากาศ</string>
+    <string name="error_sensor">ไม่พบเซนเซอร์</string>
+    <string name="manual">ควบคุมจากโรงเรือน</string>
+    <string name="descriptionMode">เมื่อคุณเปิดโหมดอัตโนมัติ จะเป็นการใช้คอมพิวเตอร์ควบคุมแทน คุณจะไม่สามารถควบคุมผ่านแอปพลิเคชันได้</string>
+    <string name="descriptionMode2"> ถ้าคุณต้องการควบคุมด้วยตนเอง กรุณาปิดโหมดอัตโนมัติ</string>
+    <string name="connecting">กำลังเชื่อมต่อ</string>
+    <string name="water_level">ระดับน้ำในถัง</string>
+    <string name="water_normal">ปกติ</string>
+    <string name="water_medium">ปานกลาง</string>
+    <string name="water_low">ต่ำ</string>
+    <string name="income">รายรับ</string>
+    <string name="notificationGreenhouse">การแจ้งเตือน</string>
+    <string name="description_notification">กรุณาเลือกค่าที่คุณต้องการรับการแจ้งเตือน</string>
+    <string name="text">โปรดตรวจสอบการเชื่อมต่อ เพื่อการใช้งานอย่างมีประสิทธิภาพ</string>
+    <string name="text_control">ขณะนี้คุณไม่ได้เชื่อมต่ออินเทอร์เน็ต เมื่อคุณทำการเชื่อมต่อคำสั่งจะถูกส่งไปอัตโนมัติ</string>
+    <string name="warning">คำเตือน</string>
+    <string name="ok">ตกลง</string>
+    <string name="info">ข้อมูลการใช้งาน</string>
+    <string name="day">วัน</string>
+    <string name="week">สัปดาห์</string>
+    <string name="month">เดือน</string>
+    <string name="year">ปี</string>
+    <string name="led_light">หลอดไฟแอลอีดี</string>
+    <string name="kg">กิโลกรัม</string>
+    <string name="production">ผลิตได้ทั้งสิ้น</string>
+    <string name="thb">บาท</string>
+    <string name="category">หมวดหมู่ :</string>
+    <string name="dateAccount">วันที่ :</string>
+    <string name="time">เวลา :</string>
+    <string name="note">ข้อมูลเพิ่มเติม :</string>
+    <string name="cancel">ยกเลิก</string>
+    <string name="product">การผลิต</string>
+    <string name="account">บัญชี</string>
+    <string name="shop">ร้านค้า</string>
+    <string name="about">เกี่ยวกับ</string>
+    <string name="success">บันทึกข้อมูลสำเร็จ</string>
+    <string name="all_values">ทั้งหมด</string>
+    <string name="on">เปิด</string>
+    <string name="off">ปิด</string>
+
+    <string-array name="category_income">
+        <item>ขายผลผลิต</item>
+        <item>ขายเมล็ดพันธุ์</item>
+        <item>ขายปุ๋ย</item>
+    </string-array>
+
+    <string-array name="category_expenses">
+        <item>ค่าไฟฟ้า</item>
+        <item>ค่าน้ำประปา</item>
+        <item>ค่าเมล็ดพันธุ์</item>
+        <item>ค่าปุ๋ย</item>
+        <item>ค่าบำรุงรักษา</item>
+    </string-array>
+
+    <string-array name="category_product">
+        <item>กรีนโอ๊ค</item>
+        <item>มะนาว</item>
+        <item>กะหล่ำปลี</item>
+    </string-array>
+
+</resources>

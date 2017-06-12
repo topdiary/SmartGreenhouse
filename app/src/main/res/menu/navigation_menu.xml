@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/nav_account"
+        android:icon="@drawable/ic_person_black"
+        android:title="@string/account"/>
+
+    <item android:id="@+id/nav_shop"
+        android:icon="@drawable/ic_shop_black"
+        android:title="@string/shop"/>
+
+    <item android:id="@+id/nav_about"
+        android:icon="@drawable/ic_info_black"
+        android:title="@string/about"/>
+
+    <item android:id="@+id/nav_setting"
+        android:icon="@drawable/ic_setting_black"
+        android:title="@string/setting"/>
+</menu>

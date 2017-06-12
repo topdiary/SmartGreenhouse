@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.nailamundev.smartgreenhouse">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".MainApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.SplashScreenActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".activity.MainActivity" />
+
+        <activity
+            android:name=".activity.MoreInfoActivity"
+            android:theme="@style/AppThemeWithActionBar" />
+
+        <activity
+            android:name=".activity.SettingGreenhouseActivity"
+            android:theme="@style/AppThemeWithActionBar_setting" />
+
+        <activity
+            android:name=".activity.ChartActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppThemeWhite" />
+
+        <activity
+            android:name=".activity.NotificationGreenhouseActivity"
+            android:theme="@style/AppThemeWithActionBar_setting" />
+
+        <activity
+            android:name=".activity.AccountGreenhouseActivity"
+            android:theme="@style/AppThemeWithActionBar"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity android:name=".activity.LoginActivity" />
+
+        <!-- meta -->
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="27a3384c8d0cc2eb35fc187ba6e1700a47946b8e" />
+        <meta-data
+            android:name="com.samsung.android.sdk.multiwindow.enable"
+            android:value="true" />
+        <meta-data
+            android:name="com.samsung.android.sdk.multiwindow.multiinstance.enable"
+            android:value="true" />
+
+        <!-- service -->
+
+        <service android:name=".manager.notifications.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service android:name=".manager.notifications.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+    </application>
+</manifest>

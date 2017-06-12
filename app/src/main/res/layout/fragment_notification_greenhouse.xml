@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/greenhouse_padding_16dp"
+                    android:text="@string/description_notification"
+                    android:textColor="@color/colorPrimary2"
+                    android:textSize="@dimen/body1" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/greenhouse_margin_top_all_value"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/greenhouse_padding_16dp"
+                    android:text="@string/all_values"
+                    android:textColor="@color/colorPrimary2"
+                    android:textSize="@dimen/title" />
+
+                <Switch
+                    android:id="@+id/switchAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/greenhouse_margin_right" />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/greenhouse_margin_top"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/greenhouse_margin_left"
+                android:paddingRight="@dimen/greenhouse_margin_right">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/greenhouse_height_layout_switch">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/temperature"
+                        android:textColor="@color/colorPrimary2"
+                        android:textSize="@dimen/body1" />
+
+                    <Switch
+                        android:id="@+id/switchTemperature"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/greenhouse_height_line"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/overlay_color" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/greenhouse_height_layout_switch">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/humidity"
+                        android:textColor="@color/colorPrimary2"
+                        android:textSize="@dimen/body1" />
+
+                    <Switch
+                        android:id="@+id/switchHumidity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/greenhouse_height_line"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/overlay_color" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/greenhouse_height_layout_switch">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/soil_moisture"
+                        android:textColor="@color/colorPrimary2"
+                        android:textSize="@dimen/body1" />
+
+                    <Switch
+                        android:id="@+id/switchSoil"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/greenhouse_height_line"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/overlay_color" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/greenhouse_height_layout_switch">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/light"
+                        android:textColor="@color/colorPrimary2"
+                        android:textSize="@dimen/body1" />
+
+                    <Switch
+                        android:id="@+id/switchLight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/greenhouse_height_line"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/overlay_color" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/greenhouse_height_layout_switch">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/water_level"
+                        android:textColor="@color/colorPrimary2"
+                        android:textSize="@dimen/body1" />
+
+                    <Switch
+                        android:id="@+id/switchWater"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/greenhouse_height_line"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/overlay_color" />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
