@@ -84,7 +84,7 @@ public class GreenhousesListAdapter extends BaseAdapter {
 
         if (i > lastPositionInteger.getValue()) {
             Animation anim = AnimationUtils.loadAnimation(viewGroup.getContext(),
-                    R.anim.up_form_bottom);
+                    R.anim.animation_up_form_bottom);
             item.startAnimation(anim);
             lastPositionInteger.setValue(i);
         }

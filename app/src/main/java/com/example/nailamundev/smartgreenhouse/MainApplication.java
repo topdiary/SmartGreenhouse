@@ -29,7 +29,6 @@ public class MainApplication extends Application {
         Fabric.with(this, new Crashlytics());
         Contextor.getInstance().init(getApplicationContext());
         FirebaseDatabase.getInstance().setPersistenceEnabled(true);
-
     }
 
 

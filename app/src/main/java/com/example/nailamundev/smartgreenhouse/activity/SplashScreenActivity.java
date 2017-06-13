@@ -64,7 +64,7 @@ public class SplashScreenActivity extends AppCompatActivity {
         if (networkInfo != null && networkInfo.isConnected()) {
             Intent intent = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(intent);
-            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+            overridePendingTransition(R.anim.animation_fade_in, R.anim.animation_fade_out);
             finish();
 
         } else {
@@ -80,7 +80,7 @@ public class SplashScreenActivity extends AppCompatActivity {
                             dialog.dismiss();
                             Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                             startActivity(intent);
-                            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                            overridePendingTransition(R.anim.animation_fade_in, R.anim.animation_fade_out);
                             finish();
                         }
                     }).show();

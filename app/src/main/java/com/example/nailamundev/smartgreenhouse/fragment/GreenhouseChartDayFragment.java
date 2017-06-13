@@ -174,7 +174,7 @@ public class GreenhouseChartDayFragment extends Fragment implements OnChartGestu
 
             if (Utils.getSDKInt() >= 18) {
                 // fill drawable only supported on api level 18 and above
-                Drawable drawable = ContextCompat.getDrawable(getActivity(), R.drawable.fade_light_green);
+                Drawable drawable = ContextCompat.getDrawable(getActivity(), R.drawable.shape_gradient_chart);
                 set1.setFillDrawable(drawable);
             }
             else {

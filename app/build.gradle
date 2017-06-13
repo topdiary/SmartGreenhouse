@@ -61,6 +61,7 @@ dependencies {
     compile 'com.github.PhilJay:MPAndroidChart:v3.0.2'
     compile 'com.github.andyxialm:ColorDialog:1.0.0'
     compile 'com.mostafagazar:customshapeimageview:1.0.4'
+    compile 'uk.co.chrisjenx:calligraphy:2.1.0'
     testCompile 'junit:junit:4.12'
 }
 

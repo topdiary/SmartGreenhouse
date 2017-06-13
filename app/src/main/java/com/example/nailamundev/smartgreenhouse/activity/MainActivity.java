@@ -37,6 +37,8 @@ public class MainActivity extends AppCompatActivity
      * Function
      **********************/
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -139,7 +141,7 @@ public class MainActivity extends AppCompatActivity
             bundle.putString("keyItem", keyItem);
             intent.putExtra("keyBundle", bundle);
             startActivity(intent);
-            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+            overridePendingTransition(R.anim.animation_fade_in, R.anim.animation_fade_out);
         } else {
 
             // Tablet
@@ -148,6 +150,7 @@ public class MainActivity extends AppCompatActivity
                     .commit();
         }
     }
+
 
 
 }

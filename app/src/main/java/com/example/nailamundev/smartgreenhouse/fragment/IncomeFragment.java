@@ -203,6 +203,4 @@ public class IncomeFragment extends Fragment implements AdapterView.OnItemSelect
 
     }
 
-
-
 }
