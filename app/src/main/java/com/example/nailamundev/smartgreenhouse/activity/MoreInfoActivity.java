@@ -1,20 +1,19 @@
 package com.example.nailamundev.smartgreenhouse.activity;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.nailamundev.smartgreenhouse.R;
 import com.example.nailamundev.smartgreenhouse.dao.GreenhousesItemDao;
-import com.example.nailamundev.smartgreenhouse.fragment.MainFragment;
 import com.example.nailamundev.smartgreenhouse.fragment.MoreInfoFragment;
-import com.inthecheesefactory.thecheeselibrary.manager.Contextor;
 
 public class MoreInfoActivity extends AppCompatActivity {
 
+    private static final String KEY_ITEM = "keyItem";
+    private static final String KEY_BUNDLE = "keyBundle";
+    private static final String DAO = "dao";
     String keyItem;
     Toolbar toolbarGreenhouse;
 
@@ -23,9 +22,9 @@ public class MoreInfoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         //Parcelable Extra
-        Bundle bundle = getIntent().getBundleExtra("keyBundle");
-        keyItem = bundle.getString("keyItem");
-        GreenhousesItemDao dao = getIntent().getParcelableExtra("dao");
+        Bundle bundle = getIntent().getBundleExtra(KEY_BUNDLE);
+        keyItem = bundle.getString(KEY_ITEM);
+        GreenhousesItemDao dao = getIntent().getParcelableExtra(DAO);
         setTitle(dao.name);
         setContentView(R.layout.activity_more_info);
 

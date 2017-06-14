@@ -57,7 +57,7 @@ public class GreenhousesListManager {
     }
 
 
-    private void saveCache(){
+    private void saveCache() {
 
         String json = new Gson().toJson(dao);
         //TODO: Save Cache
@@ -71,18 +71,18 @@ public class GreenhousesListManager {
 
     }
 
-    private void loadCache(){
+    private void loadCache() {
         // TODO: Load Cache
         SharedPreferences prefs = mContext.getSharedPreferences("Greenhouses",
                 Context.MODE_PRIVATE);
         String json = prefs.getString("json", null);
-        if (json==null)
+        if (json == null)
             return;
         dao = new Gson().fromJson(json, GreenhousesItemListDao.class);
     }
 
-    public String getIds(int i){
-        return  dao.getGreenhousesIds(i);
+    public String getIds(int i) {
+        return dao.getGreenhousesIds(i);
 
     }
 

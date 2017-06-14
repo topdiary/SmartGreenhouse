@@ -100,18 +100,20 @@ public class GreenhousesListItem extends BaseCustomViewGroup {
     }
 
 
-    public void setName(String text){
+    public void setName(String text) {
         tvName.setText(text);
     }
-    public void setAddress(String text){
+
+    public void setAddress(String text) {
         tvAddress.setText(text);
     }
-    public void setType(String text){
+
+    public void setType(String text) {
         tvType.setText(text);
     }
 
 
-    public void setImageUrl(String url){
+    public void setImageUrl(String url) {
         Glide.with(getContext())
                 .load(url)
                 .placeholder(R.drawable.loading)
@@ -119,7 +121,6 @@ public class GreenhousesListItem extends BaseCustomViewGroup {
                 .crossFade()
                 .into(ivImage);
     }
-
 
 
 }

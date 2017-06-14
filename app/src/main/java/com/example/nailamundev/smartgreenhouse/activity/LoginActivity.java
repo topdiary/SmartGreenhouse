@@ -1,7 +1,7 @@
 package com.example.nailamundev.smartgreenhouse.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import com.example.nailamundev.smartgreenhouse.R;
 

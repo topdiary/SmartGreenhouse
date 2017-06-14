@@ -1,12 +1,11 @@
 package com.example.nailamundev.smartgreenhouse.activity;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 
@@ -16,10 +15,10 @@ import cn.refactor.lib.colordialog.PromptDialog;
 
 public class SplashScreenActivity extends AppCompatActivity {
 
-    Handler handler;
-    Runnable runnable;
-    long delay_time;
-    long time = 1000L;
+    private Handler handler;
+    private Runnable runnable;
+    private long delay_time;
+    private long time = 1000L;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -80,7 +79,8 @@ public class SplashScreenActivity extends AppCompatActivity {
                             dialog.dismiss();
                             Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                             startActivity(intent);
-                            overridePendingTransition(R.anim.animation_fade_in, R.anim.animation_fade_out);
+                            overridePendingTransition(R.anim.animation_fade_in,
+                                    R.anim.animation_fade_out);
                             finish();
                         }
                     }).show();

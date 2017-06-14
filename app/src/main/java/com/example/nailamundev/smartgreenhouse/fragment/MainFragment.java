@@ -46,9 +46,7 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 public class MainFragment extends Fragment {
 
     //Variables
-    public interface FragmentListener {
-        void onGreenhouseClicked(String keyItem, GreenhousesItemDao dao);
-    }
+
     private static final String UID = "uid";
     private ListView listView;
     private GreenhousesListAdapter listAdapter;
@@ -63,12 +61,13 @@ public class MainFragment extends Fragment {
     private Query mQuery;
 
 
-
-
     /*****************
      * Functions
      ****************/
 
+    public interface FragmentListener {
+        void onGreenhouseClicked(String keyItem, GreenhousesItemDao dao);
+    }
 
     public MainFragment() {
         super();

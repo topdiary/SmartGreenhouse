@@ -21,7 +21,7 @@ import com.google.firebase.messaging.FirebaseMessaging;
 @SuppressWarnings("unused")
 public class NotificationGreenhouseFragment extends Fragment implements View.OnClickListener {
 
-
+    private static final String KEY_ITEM = "keyItem";
 
     private static final String P_NAME = "NotificationGreenhouse_Config_";
     private static final String SWITCH_ALL = "switchAll";
@@ -37,11 +37,12 @@ public class NotificationGreenhouseFragment extends Fragment implements View.OnC
     private static final String TOPIC_LIGHT = "_light";
     private static final String TOPIC_WATER = "_water";
 
+    private static final String TAG = "NotificationGreenhouseFragment";
 
     private Switch switchAll, switchTemperature, switchHumidity, switchSoil, switchLight,
             switchWater;
     private Boolean switchAllState, switchTemperatureState, switchHumidityState, switchSoilState,
-            switchLightState, switchWaterState;                     // State Switch first open app
+            switchLightState, switchWaterState;                     // State switch first open app
     private SharedPreferences sp;
     private SharedPreferences.Editor editor;
     private String keyItem;
@@ -70,8 +71,8 @@ public class NotificationGreenhouseFragment extends Fragment implements View.OnC
         super.onCreate(savedInstanceState);
         init(savedInstanceState);
 
-        keyItem = getArguments().getString("keyItem");
-        Log.d("NotificationGreenhouseFragment", "Key : " + keyItem);
+        keyItem = getArguments().getString(KEY_ITEM);
+        Log.d(TAG, "Key : " + keyItem);
         if (savedInstanceState != null)
             onRestoreInstanceState(savedInstanceState);
 
@@ -267,7 +268,6 @@ public class NotificationGreenhouseFragment extends Fragment implements View.OnC
         editor.putBoolean(SWITCH_WATER, switchWater.isChecked());
         editor.commit();
     }
-
 
 
     /********************

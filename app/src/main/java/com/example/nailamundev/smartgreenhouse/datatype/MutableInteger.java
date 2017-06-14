@@ -17,18 +17,17 @@ public class MutableInteger {
         return value;
     }
 
-   public void setValue(int value) {
+    public void setValue(int value) {
         this.value = value;
     }
 
-    public Bundle onSaveInstanceState(){
-
+    public Bundle onSaveInstanceState() {
         Bundle bundle = new Bundle();
         bundle.putInt("value", value);
         return bundle;
     }
 
-    public void onRestoreInstanceState(Bundle savedInstanceState){
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
         value = savedInstanceState.getInt("value");
     }
 }

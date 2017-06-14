@@ -5,13 +5,11 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.BaseAdapter;
-import android.widget.ProgressBar;
 
 import com.example.nailamundev.smartgreenhouse.R;
 import com.example.nailamundev.smartgreenhouse.dao.GreenhousesItemDao;
 import com.example.nailamundev.smartgreenhouse.dao.GreenhousesItemListDao;
 import com.example.nailamundev.smartgreenhouse.datatype.MutableInteger;
-import com.example.nailamundev.smartgreenhouse.manager.GreenhousesListManager;
 import com.example.nailamundev.smartgreenhouse.view.GreenhousesListItem;
 
 /**
@@ -22,7 +20,11 @@ public class GreenhousesListAdapter extends BaseAdapter {
 
 
     GreenhousesItemListDao dao;
+    MutableInteger lastPositionInteger;
 
+    public GreenhousesListAdapter(MutableInteger lastPositionInteger) {
+        this.lastPositionInteger = lastPositionInteger;
+    }
 
     public GreenhousesItemListDao getDao() {
         return dao;
@@ -30,12 +32,6 @@ public class GreenhousesListAdapter extends BaseAdapter {
 
     public void setDao(GreenhousesItemListDao dao) {
         this.dao = dao;
-    }
-
-    MutableInteger lastPositionInteger;
-
-    public GreenhousesListAdapter(MutableInteger lastPositionInteger) {
-        this.lastPositionInteger = lastPositionInteger;
     }
 
     @Override
@@ -59,7 +55,6 @@ public class GreenhousesListAdapter extends BaseAdapter {
     public long getItemId(int i) {
         return 0;
     }
-
 
 
     @Override

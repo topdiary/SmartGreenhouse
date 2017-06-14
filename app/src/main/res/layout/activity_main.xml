@@ -20,6 +20,7 @@
             android:background="?attr/colorPrimary"
             android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
         <FrameLayout
             android:id="@+id/contentContainer"
             android:layout_width="match_parent"

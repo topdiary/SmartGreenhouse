@@ -175,7 +175,7 @@
                                 android:background="@color/colorPrimary">
 
                                 <TextView
-                                    android:id="@+id/tvTitleTem"
+
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentTop="true"
@@ -185,7 +185,7 @@
                                     android:textColor="@color/white" />
 
                                 <TextView
-                                    android:id="@+id/tvValueTem"
+                                    android:id="@+id/tvValueTemperature"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentBottom="true"
@@ -197,13 +197,13 @@
                                     android:textSize="@dimen/display1" />
 
                                 <View
-                                    android:id="@+id/vTem"
+                                    android:id="@+id/vTemperature"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:background="@drawable/selector_data" />
 
                                 <TextView
-                                    android:id="@+id/tvErrorTem"
+                                    android:id="@+id/tvErrorTemperature"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_centerInParent="true"
@@ -230,7 +230,7 @@
                                 android:background="@color/blue500">
 
                                 <TextView
-                                    android:id="@+id/tvTitleHum"
+
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentTop="true"
@@ -240,7 +240,7 @@
                                     android:textColor="@color/white" />
 
                                 <TextView
-                                    android:id="@+id/tvValueHum"
+                                    android:id="@+id/tvValueHumidity"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentBottom="true"
@@ -252,13 +252,13 @@
                                     android:textSize="@dimen/display1" />
 
                                 <View
-                                    android:id="@+id/vHum"
+                                    android:id="@+id/vHumidity"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:background="@drawable/selector_data" />
 
                                 <TextView
-                                    android:id="@+id/tvErrorHum"
+                                    android:id="@+id/tvErrorHumidity"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_centerInParent="true"
@@ -290,7 +290,7 @@
                                 android:background="@color/brown">
 
                                 <TextView
-                                    android:id="@+id/tvTitleSoil"
+
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentTop="true"
@@ -343,7 +343,7 @@
                                 android:background="@color/amber">
 
                                 <TextView
-                                    android:id="@+id/tvTitleLight"
+
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentTop="true"

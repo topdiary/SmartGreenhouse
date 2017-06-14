@@ -13,6 +13,18 @@ import java.util.List;
 
 public class GreenhousesItemListDao implements Parcelable {
 
+    public static final Creator<GreenhousesItemListDao>
+            CREATOR = new Creator<GreenhousesItemListDao>() {
+        @Override
+        public GreenhousesItemListDao createFromParcel(Parcel in) {
+            return new GreenhousesItemListDao(in);
+        }
+
+        @Override
+        public GreenhousesItemListDao[] newArray(int size) {
+            return new GreenhousesItemListDao[size];
+        }
+    };
     private List<GreenhousesItemDao> mGreenhousesItemDao = new ArrayList<>();
     private List<String> mGreenhousesIds = new ArrayList<>();
 
@@ -35,18 +47,6 @@ public class GreenhousesItemListDao implements Parcelable {
     public int describeContents() {
         return 0;
     }
-
-    public static final Creator<GreenhousesItemListDao> CREATOR = new Creator<GreenhousesItemListDao>() {
-        @Override
-        public GreenhousesItemListDao createFromParcel(Parcel in) {
-            return new GreenhousesItemListDao(in);
-        }
-
-        @Override
-        public GreenhousesItemListDao[] newArray(int size) {
-            return new GreenhousesItemListDao[size];
-        }
-    };
 
     public List<GreenhousesItemDao> getmGreenhousesItemDao() {
         return mGreenhousesItemDao;
@@ -85,9 +85,9 @@ public class GreenhousesItemListDao implements Parcelable {
     public void clearmGreenhousesItemDao() {
         if (mGreenhousesItemDao.size() != 0) {
             mGreenhousesItemDao.clear();
-        }
-        else
+        } else {
             Log.d("clearmGreenhousesItemDao", "Fail" + mGreenhousesItemDao.size());
+        }
     }
 
     public void clearmGreenhousesIds() {
@@ -107,9 +107,10 @@ public class GreenhousesItemListDao implements Parcelable {
 
 
     }
-    public String getName(int i){
 
-        return  mGreenhousesItemDao.get(i).name;
+    public String getName(int i) {
+
+        return mGreenhousesItemDao.get(i).name;
     }
 
 

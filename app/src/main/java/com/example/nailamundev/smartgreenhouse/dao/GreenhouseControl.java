@@ -18,7 +18,6 @@ public class GreenhouseControl {
     public int watering;
 
 
-
     public GreenhouseControl() {
 
     }
@@ -26,13 +25,13 @@ public class GreenhouseControl {
     public GreenhouseControl(int evap, int fan1, int fan2, int fogger, int led,
                              int manual, int watering) {
 
-        this.evap       = evap;
-        this.fan1       = fan1;
-        this.fan2       = fan2;
-        this.fogger     = fogger;
-        this.led        = led;
-        this.manual     = manual;
-        this.watering   = watering;
+        this.evap = evap;
+        this.fan1 = fan1;
+        this.fan2 = fan2;
+        this.fogger = fogger;
+        this.led = led;
+        this.manual = manual;
+        this.watering = watering;
 
     }
 

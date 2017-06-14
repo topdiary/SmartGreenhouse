@@ -57,10 +57,10 @@ public class GreenhouseDataFragment extends Fragment implements View.OnClickList
 
 
     private TextView tvAddressData, tvPlant, tvDate, tvExTemperature;
-    private TextView tvValueTem, tvValueHum, tvValueSoil, tvValueLight, tvWaterLevel, tvIncome,
+    private TextView tvValueTemperature, tvValueHumidity, tvValueSoil, tvValueLight, tvWaterLevel, tvIncome,
             tvExpense, tvProduct;
-    private TextView tvErrorTem, tvErrorHum, tvErrorSoil, tvErrorLight;
-    private View vTem, vHum, vSoil, vLight, vMap;
+    private TextView tvErrorTemperature, tvErrorHumidity, tvErrorSoil, tvErrorLight;
+    private View vTemperature, vHumidity, vSoil, vLight, vMap;
     private ImageView ivImgData;
     private ProgressDialog progressDialog;
     private SwipeRefreshLayout swipeRefreshLayoutData;
@@ -76,6 +76,12 @@ public class GreenhouseDataFragment extends Fragment implements View.OnClickList
     private ChildEventListener mChildEventListenerIncome, mChildEventListenerExpense,
             mChildEventListenerProduct;
     private Query mQueryIncome, mQueryExpense, mQueryProduct;
+
+
+
+    /*****************
+     * Functions
+     ****************/
 
     public GreenhouseDataFragment() {
         super();
@@ -142,21 +148,20 @@ public class GreenhouseDataFragment extends Fragment implements View.OnClickList
         tvAddressData = (TextView) rootView.findViewById(R.id.tvAddressData);
         tvPlant = (TextView) rootView.findViewById(R.id.tvPlant);
         tvDate = (TextView) rootView.findViewById(R.id.tvDate);
-        tvValueTem = (TextView) rootView.findViewById(R.id.tvValueTem);
-        tvValueHum = (TextView) rootView.findViewById(R.id.tvValueHum);
+        tvValueTemperature = (TextView) rootView.findViewById(R.id.tvValueTemperature);
+        tvValueHumidity = (TextView) rootView.findViewById(R.id.tvValueHumidity);
         tvValueSoil = (TextView) rootView.findViewById(R.id.tvValueSoil);
         tvValueLight = (TextView) rootView.findViewById(R.id.tvValueLight);
         tvWaterLevel = (TextView) rootView.findViewById(R.id.tvWaterLevel);
         tvExTemperature = (TextView) rootView.findViewById(R.id.tvExTemperature);
-        tvErrorTem = (TextView) rootView.findViewById(R.id.tvErrorTem);
-        tvErrorHum = (TextView) rootView.findViewById(R.id.tvErrorHum);
+        tvErrorTemperature = (TextView) rootView.findViewById(R.id.tvErrorTemperature);
+        tvErrorHumidity = (TextView) rootView.findViewById(R.id.tvErrorHumidity);
         tvErrorLight = (TextView) rootView.findViewById(R.id.tvErrorLight);
         tvErrorSoil = (TextView) rootView.findViewById(R.id.tvErrorSoil);
 
-
         // View Error
-        vTem = rootView.findViewById(R.id.vTem);
-        vHum = rootView.findViewById(R.id.vHum);
+        vTemperature = rootView.findViewById(R.id.vTemperature);
+        vHumidity = rootView.findViewById(R.id.vHumidity);
         vLight = rootView.findViewById(R.id.vLight);
         vSoil = rootView.findViewById(R.id.vSoil);
         vMap = rootView.findViewById(R.id.vMap);
@@ -166,17 +171,16 @@ public class GreenhouseDataFragment extends Fragment implements View.OnClickList
         tvExpense = (TextView) rootView.findViewById(R.id.tvExpense);
         tvProduct = (TextView) rootView.findViewById(R.id.tvProduct);
 
-        vTem.setOnClickListener(this);
-        vHum.setOnClickListener(this);
+        vTemperature.setOnClickListener(this);
+        vHumidity.setOnClickListener(this);
         vLight.setOnClickListener(this);
         vSoil.setOnClickListener(this);
         vMap.setOnClickListener(this);
 
         swipeRefreshLayoutData = (SwipeRefreshLayout) rootView.findViewById(R.id.swipeRefreshLayoutData);
-
         swipeRefreshLayoutData.setOnRefreshListener(refreshDataRealtime);
-        ivImgData = (ImageView) rootView.findViewById(R.id.ivImgData);
 
+        ivImgData = (ImageView) rootView.findViewById(R.id.ivImgData);
 
         // Set View
         tvPlant.setText(dao.plant);
@@ -394,70 +398,97 @@ public class GreenhouseDataFragment extends Fragment implements View.OnClickList
 
     public void updateView(GreenhouseRealTime data) {
 
-        if (data.a7 == 0) {
+        progressDialog.dismiss();
 
-            // No sensor Temperature and Humidity
-            tvErrorTem.setText(R.string.error_sensor);
-            vTem.setBackgroundColor(COLOR_NO_SENSOR);
-            tvErrorHum.setText(R.string.error_sensor);
-            vHum.setBackgroundColor(COLOR_NO_SENSOR);
-            tvValueHum.setText(" ");
-            tvValueTem.setText(" ");
-            tvExTemperature.setText(String.valueOf(data.a5 / 10));
-            progressDialog.dismiss();
+        if (data.a5 == 0){
+            // No sensor external temperature
+            tvExTemperature.setText(" ");
         } else {
-
-            tvErrorTem.setText(" ");
-            tvErrorHum.setText(" ");
-
-            vTem.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.selector_data));
-            vHum.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.selector_data));
-
             tvExTemperature.setText(String.valueOf(data.a5 / 10));
-            tvValueTem.setText(String.valueOf(data.a7 / 10) + " °C");
-            tvValueHum.setText(String.valueOf(data.a6 / 10) + " %");
         }
 
 
-        // Check Light
+        if (data.a7 == 0) {
+
+            // No sensor temperature and humidity
+            tvErrorTemperature.setText(R.string.error_sensor);
+            vTemperature.setBackgroundColor(COLOR_NO_SENSOR);
+            vTemperature.setEnabled(false);
+            tvValueTemperature.setText(" ");
+
+            tvErrorHumidity.setText(R.string.error_sensor);
+            vHumidity.setBackgroundColor(COLOR_NO_SENSOR);
+            vHumidity.setEnabled(false);
+            tvValueHumidity.setText(" ");
+
+        } else {
+
+            tvErrorTemperature.setText(" ");
+            tvErrorHumidity.setText(" ");
+            vTemperature.setEnabled(true);
+            vHumidity.setEnabled(true);
+
+            vTemperature.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.selector_data));
+            vHumidity.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.selector_data));
+
+
+            tvValueTemperature.setText(String.valueOf(data.a7 / 10) + " °C");
+            tvValueHumidity.setText(String.valueOf(data.a6 / 10) + " %");
+
+
+        }
+
+
+        // Check light
         if (data.a1 == 0) {
-            // No sensor Light
+            // No sensor light
             vLight.setBackgroundColor(COLOR_NO_SENSOR);
+            vLight.setEnabled(false);
             tvErrorLight.setText(R.string.error_sensor);
             tvValueLight.setText(" ");
+
         } else {
+
             tvErrorLight.setText(" ");
+            vLight.setEnabled(true);
             vLight.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.selector_data));
             tvValueLight.setText(String.valueOf(data.a1) + " lux");
         }
 
         //Check soil
         if (data.a3 == 0) {
-            // No sensor Soil
+            // No sensor soil
             vSoil.setBackgroundColor(COLOR_NO_SENSOR);
+            vSoil.setEnabled(false);
             tvErrorSoil.setText(R.string.error_sensor);
             tvValueSoil.setText(" ");
 
         } else {
             tvErrorSoil.setText(" ");
+            vSoil.setEnabled(true);
             vSoil.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.selector_data));
             tvValueSoil.setText(String.valueOf(data.a3) + " %");
+
         }
 
 
-        // Check Water Level
+        // Check water level
         if (data.a10 > 100 && data.a10 <= 400) {
             tvWaterLevel.setText(R.string.water_normal);
             tvWaterLevel.setTextColor(COLOR_WATER_NORMAL);
         }
-        if (data.a10 > 400 && data.a10 <= 700) {
+        else if (data.a10 > 400 && data.a10 <= 700) {
             tvWaterLevel.setText(R.string.water_medium);
             tvWaterLevel.setTextColor(COLOR_WATER_MEDIUM);
         }
-        if (data.a10 > 700) {
+        else if (data.a10 > 700) {
             tvWaterLevel.setText(R.string.water_low);
             tvWaterLevel.setTextColor(COLOR_WATER_LOW);
-
+        }
+        else {
+            // No sensor water
+            tvWaterLevel.setText(R.string.error_sensor);
+            tvWaterLevel.setTextColor(COLOR_NO_SENSOR);
         }
         progressDialog.dismiss();
 
@@ -483,6 +514,9 @@ public class GreenhouseDataFragment extends Fragment implements View.OnClickList
         @Override
         public void onRefresh() {
             loadData();
+            loadDataIncome();
+            loadDataExpense();
+            loadDataProduct();
         }
     };
 
@@ -494,11 +528,11 @@ public class GreenhouseDataFragment extends Fragment implements View.OnClickList
                 doFunctionMap();
                 break;
 
-            case R.id.vTem:
+            case R.id.vTemperature:
                 Intent intentTemperature = new Intent(getActivity(), ChartActivity.class);
                 startActivity(intentTemperature);
                 break;
-            case R.id.vHum:
+            case R.id.vHumidity:
                 Intent intentHumidity = new Intent(getActivity(), ChartActivity.class);
                 startActivity(intentHumidity);
                 break;

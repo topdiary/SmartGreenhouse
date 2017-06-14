@@ -152,7 +152,6 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener,
     }
 
 
-
     private void sendDataToFirebase() {
         try {
             amount = Integer.parseInt(editTextAmount.getText().toString());
@@ -192,7 +191,6 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener,
         }
 
     }
-
 
 
     @Override

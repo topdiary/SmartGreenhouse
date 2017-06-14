@@ -139,8 +139,5 @@ public class AccountGreenhouseFragment extends Fragment {
     }
 
 
-    /***********************
-     * Listener Zone
-     **********************/
 
 }

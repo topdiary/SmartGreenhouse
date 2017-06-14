@@ -149,7 +149,7 @@ public class GreenhouseChartDayFragment extends Fragment implements OnChartGestu
 
         if (mChart.getData() != null &&
                 mChart.getData().getDataSetCount() > 0) {
-            set1 = (LineDataSet)mChart.getData().getDataSetByIndex(0);
+            set1 = (LineDataSet) mChart.getData().getDataSetByIndex(0);
             set1.setValues(values);
             mChart.getData().notifyDataChanged();
             mChart.notifyDataSetChanged();
@@ -174,10 +174,10 @@ public class GreenhouseChartDayFragment extends Fragment implements OnChartGestu
 
             if (Utils.getSDKInt() >= 18) {
                 // fill drawable only supported on api level 18 and above
-                Drawable drawable = ContextCompat.getDrawable(getActivity(), R.drawable.shape_gradient_chart);
+                Drawable drawable = ContextCompat.getDrawable(getActivity(),
+                        R.drawable.shape_gradient_chart);
                 set1.setFillDrawable(drawable);
-            }
-            else {
+            } else {
                 set1.setFillColor(Color.BLACK);
             }
 
@@ -222,12 +222,14 @@ public class GreenhouseChartDayFragment extends Fragment implements OnChartGestu
     }
 
     @Override
-    public void onChartGestureStart(MotionEvent me, ChartTouchListener.ChartGesture lastPerformedGesture) {
+    public void onChartGestureStart(MotionEvent me,
+                                    ChartTouchListener.ChartGesture lastPerformedGesture) {
 
     }
 
     @Override
-    public void onChartGestureEnd(MotionEvent me, ChartTouchListener.ChartGesture lastPerformedGesture) {
+    public void onChartGestureEnd(MotionEvent me,
+                                  ChartTouchListener.ChartGesture lastPerformedGesture) {
 
     }
 

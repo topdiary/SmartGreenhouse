@@ -3,11 +3,11 @@ package com.example.nailamundev.smartgreenhouse.activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -15,9 +15,7 @@ import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import com.example.nailamundev.smartgreenhouse.R;
-
 import com.example.nailamundev.smartgreenhouse.dao.GreenhousesItemDao;
-import com.example.nailamundev.smartgreenhouse.dao.GreenhousesItemListDao;
 import com.example.nailamundev.smartgreenhouse.fragment.MainFragment;
 import com.example.nailamundev.smartgreenhouse.fragment.MoreInfoFragment;
 
@@ -29,6 +27,10 @@ public class MainActivity extends AppCompatActivity
 
 
     //Variable
+
+    private static final String KEY_ITEM = "keyItem";
+    private static final String KEY_BUNDLE = "keyBundle";
+    private static final String DAO = "dao";
     DrawerLayout drawerLayout;
     ActionBarDrawerToggle actionBarDrawerToggle;
     Toolbar toolbar;
@@ -36,7 +38,6 @@ public class MainActivity extends AppCompatActivity
     /***********************
      * Function
      **********************/
-
 
 
     @Override
@@ -90,7 +91,7 @@ public class MainActivity extends AppCompatActivity
 
         switch (item.getItemId()) {
             case R.id.action_addGreenhouses:
-                Toasty.success(this, "Success!", Toast.LENGTH_SHORT, true).show();
+                showToast("Add greenhouse");
                 break;
             case R.id.action_settings:
                 showToast("Setting");
@@ -136,10 +137,10 @@ public class MainActivity extends AppCompatActivity
             //Mobile
             Intent intent = new Intent(MainActivity.this,
                     MoreInfoActivity.class);
-            intent.putExtra("dao", dao);
+            intent.putExtra(DAO, dao);
             Bundle bundle = new Bundle();
-            bundle.putString("keyItem", keyItem);
-            intent.putExtra("keyBundle", bundle);
+            bundle.putString(KEY_ITEM, keyItem);
+            intent.putExtra(KEY_BUNDLE, bundle);
             startActivity(intent);
             overridePendingTransition(R.anim.animation_fade_in, R.anim.animation_fade_out);
         } else {
@@ -150,7 +151,6 @@ public class MainActivity extends AppCompatActivity
                     .commit();
         }
     }
-
 
 
 }

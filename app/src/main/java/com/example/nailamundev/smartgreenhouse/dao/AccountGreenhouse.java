@@ -13,12 +13,12 @@ public class AccountGreenhouse {
     String timeStamp;
 
 
-    public AccountGreenhouse(){
+    public AccountGreenhouse() {
 
     }
 
-    public AccountGreenhouse( int amount, String category,
-                              String note, String timeStamp){
+    public AccountGreenhouse(int amount, String category,
+                             String note, String timeStamp) {
 
         this.amount = amount;
         this.category = category;

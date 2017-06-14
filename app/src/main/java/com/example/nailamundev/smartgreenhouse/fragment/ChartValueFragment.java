@@ -60,7 +60,7 @@ public class ChartValueFragment extends Fragment {
         // Init 'View' instance(s) with rootView.findViewById here
 
         viewPagerChart = (ViewPager) rootView.findViewById(R.id.viewPagerChart);
-        viewPagerChart.setAdapter( new FragmentStatePagerAdapter(getChildFragmentManager()) {
+        viewPagerChart.setAdapter(new FragmentStatePagerAdapter(getChildFragmentManager()) {
             @Override
             public Fragment getItem(int position) {
                 switch (position) {

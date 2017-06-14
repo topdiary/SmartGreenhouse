@@ -1,25 +1,28 @@
 package com.example.nailamundev.smartgreenhouse.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
 import com.example.nailamundev.smartgreenhouse.R;
 import com.example.nailamundev.smartgreenhouse.dao.GreenhousesItemDao;
 import com.example.nailamundev.smartgreenhouse.fragment.NotificationGreenhouseFragment;
-import com.example.nailamundev.smartgreenhouse.fragment.SettingGreenhouseFragment;
 
 public class NotificationGreenhouseActivity extends AppCompatActivity {
 
+    private static final String KEY_ITEM = "keyItem";
+    private static final String KEY_BUNDLE = "keyBundle";
+    private static final String DAO = "dao";
     String keyItem;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Bundle bundle = getIntent().getBundleExtra("keyBundle");
-        keyItem = bundle.getString("keyItem");
-        GreenhousesItemDao dao = getIntent().getParcelableExtra("dao");
-        setTitle(getString(R.string.notificationGreenhouse) +" "+ dao.name);
+        Bundle bundle = getIntent().getBundleExtra(KEY_BUNDLE);
+        keyItem = bundle.getString(KEY_ITEM);
+        GreenhousesItemDao dao = getIntent().getParcelableExtra(DAO);
+        setTitle(getString(R.string.notificationGreenhouse) + " " + dao.name);
         setContentView(R.layout.activity_notification_greenhouse);
 
         initInstances();
@@ -27,10 +30,10 @@ public class NotificationGreenhouseActivity extends AppCompatActivity {
         if (savedInstanceState == null) {
 
             getSupportFragmentManager().beginTransaction()
-                    .add(R.id.contentContainerNfGreenhouse, NotificationGreenhouseFragment.newInstance(keyItem))
+                    .add(R.id.contentContainerNfGreenhouse,
+                            NotificationGreenhouseFragment.newInstance(keyItem))
                     .commit();
         }
-
 
 
     }

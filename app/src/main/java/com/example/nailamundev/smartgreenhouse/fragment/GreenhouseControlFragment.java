@@ -1,7 +1,6 @@
 package com.example.nailamundev.smartgreenhouse.fragment;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -14,24 +13,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import com.example.nailamundev.smartgreenhouse.R;
-import com.example.nailamundev.smartgreenhouse.activity.MainActivity;
 import com.example.nailamundev.smartgreenhouse.dao.GreenhouseControl;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
-
-import org.w3c.dom.Text;
 
 import java.util.Map;
 
-import cn.refactor.lib.colordialog.ColorDialog;
 import cn.refactor.lib.colordialog.PromptDialog;
 
 
@@ -53,7 +46,9 @@ public class GreenhouseControlFragment extends Fragment implements View.OnClickL
     private static final String UID = "uid";
     private static final String KEY_ITEM = "keyItem";
     private static final String TAG_CHECK_POINT = "GreenhouseControlFragment";
+
     private int checkFirst;
+    private int stateMode;
     private String keyItem;
     private ImageView ivModeDevice, ivLogoModeDevice;
     private ImageView iconDeviceVen, iconDeviceLight, iconDeviceEvap, iconDeviceWater,
@@ -61,7 +56,6 @@ public class GreenhouseControlFragment extends Fragment implements View.OnClickL
     private TextView tvModeDevice;
     private ToggleButton tgVentilator, tgLight, tgEvap, tgWater, tgFogger;
     private View vVentilator, vLight, vEvap, vWater, vFogger;
-    private int stateMode;
     private GreenhouseControl stateCheck;
 
     //Firebase Variable
@@ -352,6 +346,7 @@ public class GreenhouseControlFragment extends Fragment implements View.OnClickL
                 } else {
                     iconDeviceWater.setImageResource(R.drawable.water_open);
                     tgWater.setChecked(true);
+
                 }
             }
 
@@ -372,11 +367,9 @@ public class GreenhouseControlFragment extends Fragment implements View.OnClickL
 
     private boolean checkNetwork() {
         Log.d(TAG_CHECK_POINT, "checkNetwork");
-
         ConnectivityManager manager = (ConnectivityManager) getContext()
                 .getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = manager.getActiveNetworkInfo();
-
         return !(networkInfo != null && networkInfo.isConnected());
 
     }
@@ -428,7 +421,8 @@ public class GreenhouseControlFragment extends Fragment implements View.OnClickL
 
 
     private void doFunctionCheckFirst() {
-        SharedPreferences checkFirst = getContext().getSharedPreferences(FIRST_CONTROL, Context.MODE_PRIVATE);
+        SharedPreferences checkFirst = getContext()
+                .getSharedPreferences(FIRST_CONTROL, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = checkFirst.edit();
         Boolean stateFirst = checkFirst.getBoolean(CHECK_FIRST, true);
         if (stateFirst && checkNetwork()) {

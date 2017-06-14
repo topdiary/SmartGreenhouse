@@ -31,6 +31,9 @@ public class SettingGreenhouseFragment extends Fragment {
 
     private static final String UID = "uid";
     private static final String KEY_ITEM = "keyItem";
+    private static final String DAO = "dao";
+    private static final String TAG = "SettingGreenhouseFragment";
+
     private TextView tvStateMode;
     private Switch switchMode;
     private String keyItem;
@@ -55,8 +58,8 @@ public class SettingGreenhouseFragment extends Fragment {
         Bundle args = new Bundle();
 
         args.putString(KEY_ITEM, keyItem);
-        args.putParcelable("dao", dao);
-        Log.d("SettingGreenhouseFragment", "keyItem : " + keyItem);
+        args.putParcelable(DAO, dao);
+        Log.d(TAG, "keyItem : " + keyItem);
         fragment.setArguments(args);
         return fragment;
     }

@@ -1,16 +1,21 @@
 package com.example.nailamundev.smartgreenhouse.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
 
 import com.example.nailamundev.smartgreenhouse.R;
 import com.example.nailamundev.smartgreenhouse.dao.GreenhousesItemDao;
-import com.example.nailamundev.smartgreenhouse.fragment.MainFragment;
 import com.example.nailamundev.smartgreenhouse.fragment.SettingGreenhouseFragment;
 
 public class SettingGreenhouseActivity extends AppCompatActivity {
+
+
+    private static final String KEY_ITEM = "keyItem";
+    private static final String KEY_BUNDLE = "keyBundle";
+    private static final String DAO = "dao";
+    private static final String TAG = "SettingGreenhouseActivity";
     String keyItem;
 
 
@@ -19,11 +24,11 @@ public class SettingGreenhouseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         //Parcelable Extra
-        Bundle bundle = getIntent().getBundleExtra("keyBundle");
-        keyItem = bundle.getString("keyItem");
-        GreenhousesItemDao dao = getIntent().getParcelableExtra("dao");
+        Bundle bundle = getIntent().getBundleExtra(KEY_BUNDLE);
+        keyItem = bundle.getString(KEY_ITEM);
+        GreenhousesItemDao dao = getIntent().getParcelableExtra(DAO);
         setTitle(getString(R.string.auto) + " " + dao.name);
-        Log.d("onCreate", "keyItem : " + keyItem);
+        Log.d(TAG, "keyItem : " + keyItem);
         setContentView(R.layout.activity_setting_greenhouse);
 
         initInstances();
@@ -31,7 +36,8 @@ public class SettingGreenhouseActivity extends AppCompatActivity {
         if (savedInstanceState == null) {
 
             getSupportFragmentManager().beginTransaction()
-                    .add(R.id.contentContainerSetting, SettingGreenhouseFragment.newInstance(keyItem, dao))
+                    .add(R.id.contentContainerSetting,
+                            SettingGreenhouseFragment.newInstance(keyItem, dao))
                     .commit();
 
         }

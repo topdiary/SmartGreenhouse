@@ -1,7 +1,4 @@
 <resources>
-    <string name="app_name">SmartGreenhouse</string>
-    <string name="open_drawer">Open Menu</string>
-    <string name="close_drawer">Close Menu</string>
     <string name="setting">การตั้งค่า</string>
     <string name="send_feedback">ตอบกลับ</string>
     <string name="help">ช่วยเหลือ</string>
