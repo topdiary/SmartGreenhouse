@@ -75,6 +75,8 @@
 
 
     <!-- img -->
+
+
     <dimen name="greenhouse_size_icon_device">40dp</dimen>
     <dimen name="greenhouse_size_icon_placeholder">20dp</dimen>
     <dimen name="greenhouse_size_icon_direction">20dp</dimen>
@@ -82,9 +84,10 @@
     <dimen name="greenhouse_size_icon_cloud">30dp</dimen>
     <dimen name="greenhouse_size_icon_water">40dp</dimen>
     <dimen name="greenhouse_size_icon_location">15dp</dimen>
+    <dimen name="greenhouse_size_img_user">64dp</dimen>
     <dimen name="greenhouse_img_height">90dp</dimen>
     <dimen name="greenhouse_img_control">60dp</dimen>
-    <dimen name="greenhouse_size_img_user">64dp</dimen>
+    <dimen name="greenhouse_navigation_img_height">150dp</dimen>
 
 
 </resources>

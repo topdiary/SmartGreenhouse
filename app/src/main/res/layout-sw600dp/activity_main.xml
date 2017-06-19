@@ -71,7 +71,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/greenhouse_nevigation_img_height">
+                    android:layout_height="@dimen/greenhouse_navigation_img_height">
 
                     <ImageView
                         android:layout_width="match_parent"
