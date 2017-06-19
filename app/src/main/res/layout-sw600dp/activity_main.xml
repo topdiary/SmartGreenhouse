@@ -57,58 +57,66 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:background="@color/white"
-        android:orientation="vertical"
-        android:weightSum="3">
+        android:orientation="vertical">
 
-        <RelativeLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="@dimen/greenhouse_height_zero"
-            android:layout_weight="0.8">
+            android:layout_height="match_parent"
+            android:fillViewport="true">
 
-            <ImageView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                android:src="@drawable/bg_mock" />
+                android:orientation="vertical">
 
-            <com.meg7.widget.CircleImageView
-                android:layout_width="@dimen/greenhouse_size_img_user"
-                android:layout_height="@dimen/greenhouse_size_img_user"
-                android:layout_above="@+id/tvUser"
-                android:layout_marginBottom="@dimen/greenhouse_margin_bottom"
-                android:layout_marginLeft="@dimen/greenhouse_margin_left"
-                android:scaleType="centerCrop"
-                android:src="@drawable/user_mock_menu" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/greenhouse_nevigation_img_height">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/bg_mock" />
+
+                    <com.meg7.widget.CircleImageView
+                        android:layout_width="@dimen/greenhouse_size_img_user"
+                        android:layout_height="@dimen/greenhouse_size_img_user"
+                        android:layout_above="@+id/tvUser"
+                        android:layout_marginBottom="@dimen/greenhouse_margin_bottom"
+                        android:layout_marginLeft="@dimen/greenhouse_margin_left"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/user_mock_menu" />
 
 
-            <TextView
-                android:id="@id/tvUser"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_above="@+id/tvEmail"
-                android:layout_marginLeft="@dimen/greenhouse_margin_left"
-                android:text="Gavin Broke"
-                android:textColor="@color/white"
-                android:textSize="@dimen/subHeading" />
+                    <TextView
+                        android:id="@id/tvUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/tvEmail"
+                        android:layout_marginLeft="@dimen/greenhouse_margin_left"
+                        android:text="Gavin Broke"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/subHeading" />
 
-            <TextView
-                android:id="@id/tvEmail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_marginBottom="@dimen/greenhouse_margin_bottom"
-                android:layout_marginLeft="@dimen/greenhouse_margin_left"
-                android:text="smartgreenhouses2017@email.com"
-                android:textColor="@color/white"
-                android:textSize="@dimen/caption" />
+                    <TextView
+                        android:id="@id/tvEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="@dimen/greenhouse_margin_bottom"
+                        android:layout_marginLeft="@dimen/greenhouse_margin_left"
+                        android:text="smartgreenhouses2017@email.com"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/caption" />
+                </RelativeLayout>
 
-        </RelativeLayout>
+                <android.support.design.widget.NavigationView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:menu="@menu/navigation_menu" />
 
-        <android.support.design.widget.NavigationView
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/greenhouse_height_zero"
-            android:layout_weight="2.2"
-            app:menu="@menu/navigation_menu" />
-
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
 </android.support.v4.widget.DrawerLayout>
