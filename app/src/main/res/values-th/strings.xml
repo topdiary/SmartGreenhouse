@@ -59,6 +59,7 @@
     <string name="all_values">ทั้งหมด</string>
     <string name="on">เปิด</string>
     <string name="off">ปิด</string>
+    <string name="profile">ข้อมูลส่วนตัว</string>
 
     <string-array name="category_income">
         <item>ขายผลผลิต</item>
