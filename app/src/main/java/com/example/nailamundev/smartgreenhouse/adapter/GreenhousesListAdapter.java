@@ -59,18 +59,7 @@ public class GreenhousesListAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-
-
-        GreenhousesListItem item;
-
-        if (view != null) {
-            item = (GreenhousesListItem) view;
-
-        } else {
-            item = new GreenhousesListItem(viewGroup.getContext());
-
-        }
-
+        GreenhousesListItem item = (view != null) ? (GreenhousesListItem) view : new GreenhousesListItem(viewGroup.getContext());
         GreenhousesItemDao dao = (GreenhousesItemDao) getItem(i);
         item.setName(dao.name);
         item.setAddress(dao.address);
@@ -83,7 +72,6 @@ public class GreenhousesListAdapter extends BaseAdapter {
             item.startAnimation(anim);
             lastPositionInteger.setValue(i);
         }
-
 
         return item;
     }
